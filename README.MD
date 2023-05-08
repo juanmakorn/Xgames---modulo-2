@@ -1,5 +1,5 @@
 # Practico Grupal
-# TRABAJO PRACTICO DE Terminacion de Modulo "
+# TRABAJO PRACTICO DE Fin de Modulo 2
 ## Integrantes:
 ## Carla Romina Baez 
 ## Agustin Ruben Baza
@@ -88,8 +88,8 @@ objetos, clases etc.
 ● Uso de Github para trabajar en forma colaborativa con el grupo.
 ● Subir el sitio a un servidor ej: netlify o githubPages
 
-
-
+## Enunciado:
+- [Enunciado](https://drive.google.com/file/d/1gfcsseV-vAw2pjRdFjvQurEaDLHLqj4B/view)
 ## Trello:
 - [Trello](https://trello.com/b/1Q8GP3Ne/xgames)
 Tenga en cuenta que al ingresar al link tiene que tener su usuario y constraseña.
@@ -97,4 +97,4 @@ Tenga en cuenta que al ingresar al link tiene que tener su usuario y constraseñ
 - [GitHup](https://github.com/juanmakorn/Xgames---modulo-2.git)
 Tenga en cuenta que al ingresar al link tiene que tener su usuario y constraseña.
 
-#### Muchas Gracias por pasar.  
+### Muchas Gracias por pasar.
