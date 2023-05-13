@@ -1,0 +1,24 @@
+.tamanioImagen{
+    width: 420px;
+    height: 400px;
+}
+
+.tamanioImagen2{
+    width: 420px;
+    height: 500px;
+}
+
+.tamanioVideo{
+    width: 720px;
+    height: 480px;
+}
+
+.caraFeliz{
+    font-size: 1.5rem;
+    color: chartreuse;
+}
+
+.caraTriste{
+    font-size: 1.5rem;
+    color: crimson;
+}
