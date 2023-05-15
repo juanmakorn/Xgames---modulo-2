@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Trabajo de Fin de modulo " content="Ecommerce Gamer" />
+    <meta name="author" content="Trabajo Grupal - Fin de Modulo." />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+    <title>XGames</title>
+</head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Juegos</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="administrador.html"
+                  >Administrador</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <span
+                  class="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-moon-stars-fill"></i>
+                </span>
+                <ul class="dropdown-menu">
+                  <li>
+                    <button class="dropdown-item" id="btnThemeLight">
+                      <i class="bi bi-sun-fill"></i> Light
+                    </button>
+                  </li>
+                  <li>
+                    <button class="dropdown-item" id="btnThemeDark">
+                      <i class="bi bi-moon-stars-fill"></i> Dark
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container my-5">
+      <h1 class="display-4 text-center">Administrador de Juegos</h1>
+      <hr />
+      <section class="d-flex">
+        <p class="mb-0">Opciones:</p>
+        <button
+          class="btn btn-outline-primary btn-sm ms-3"
+          id="btnCrearPelicula"
+        >
+          <i class="bi bi-clipboard2-plus-fill"></i>
+        </button>
+      </section>
+      <section class="mt-5">
+        <h2 class="display-6">Lista de Juegos</h2>
+        <hr />
+        <article class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Genero</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tablaJuegos">
+            </tbody>
+          </table>
+        </article>
+      </section>
+    </main>
+    <div
+      class="modal fade"
+      id="modalJuegos"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Administrar Juego
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="formJuego">
+              <div class="mb-3">
+                <label for="codigo">Código</label>
+                <input
+                  id="codigo"
+                  type="text"
+                  class="form-control"
+                  placeholder="123"
+                  maxlength="5"
+                  minlength="1"
+                  disabled
+                />
+              </div>
+              <div class="mb-3">
+                <label for="titulo">Nombre</label>
+                <input
+                  id="titulo"
+                  type="text"
+                  class="form-control"
+                  placeholder="Ej: Redident Evil"
+                
+                />
+              </div>
+              <div class="mb-3">
+                <label for="descripcion">Descripcion </label>
+                <textarea
+                  id="descripcion"
+                  rows="4"
+                  class="form-control"
+                  placeholder="Ej:xxxxxxxxxxxxxxxxxxxxxx"
+                  maxlength="200"
+                  minlength="2"
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="imagen">Imagen <small class="text-secondary">
+                  </small></label>
+                <input
+                  id="imagen"
+                  type="text"
+                  class="form-control"
+                  placeholder=""
+                  maxlength="120"
+                  minlength="2"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="genero">Categoria</label>
+                <select id="genero" class="form-control">
+                  <option value="">Selecione una opcion</option>
+                  <option value="accion">Sandbox</option>
+                  <option value="drama">Fabricación</option>
+                  <option value="comedia">Aventura</option>
+                  <option value="aventura">Aventura</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="precio">Precio</label>
+                <input
+                  id="precio"
+                  type="text"
+                  class="form-control"
+                  placeholder="Ej: 2023"
+                  maxlength="6"
+                  minlength="6"
+                 
+                />
+              </div>
+              <div class="mb-3">
+                <label for="jugadores"
+                  ><small class="text-secondary">
+                  </small
+                  ></label
+                >
+                <input
+                  id="jugadores"
+                  type="text"
+                  class="form-control"
+                  placeholder="Ej: 1 jugador"
+                
+                />
+              </div>
+              <div class="mb-3">
+                <label for="idioma">Idioma</label>
+                <input
+                  id="idioma
+                  type="text"
+                  class="form-control"
+                  placeholder="Ej: Español"
+                  maxlength="20"
+                  minlength="2"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="lanzamiento"
+                  >lanzamiento
+                  ></label
+                >
+                <input
+                  id="lanzamiento"
+                  type="text"
+                  class="form-control"
+                  placeholder="Ej: 2015"
+                  maxlength="4"
+                  minlength="4"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="edad"
+                  >Edad<small class="text-secondary">
+                    </small
+                  ></label
+                >
+                <input
+                  id="edad"
+                  type="text"
+                  class="form-control"
+                  placeholder="Ej: 18"
+                  maxlength="3"
+                  minlength="2"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="descripcion">Descripcion </label>
+                <textarea
+                  id="descripcion"
+                  rows="4"
+                  class="form-control"
+                  placeholder="Ej:Juego..."
+                  maxlength="200"
+                  minlength="2"
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="descripcion">Requisitos </label>
+                <textarea
+                  id="descripcion"
+                  rows="4"
+                  class="form-control"
+                  placeholder="Ej:Creado para PS4"
+                  maxlength="200"
+                  minlength="2"
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="descripcion">Recomendado </label>
+                <textarea
+                  id="descripcion"
+                  rows="4"
+                  class="form-control"
+                  placeholder="Ej:..."
+                  maxlength="200"
+                  minlength="2"
+                ></textarea>
+              </div>
+              <div
+                class="alert alert-danger mt-3 d-none"
+                role="alert"
+                id="alerta"
+              >
+            </div>
+              <button class="btn btn-primary" type="submit" id="btnFormulario">
+                Enviar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark text-light text-center py-3">
+      <p>&copy; Todos los derechos reservados</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="./js/tema.js"></script>
+    <script src="./js/administrador.js" type="module"></script>
+  </body>
+</html>
