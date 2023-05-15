@@ -1,3 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+   
   .contenedor {
     text-align: center;
     position: absolute;
@@ -17,18 +24,11 @@
     font-size: 24px;
     color: #fff;
   }
-  
-  .boton {
-    display: inline-block;
-    background-color: #fff;
-    color: #333;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 20px;
-    margin-top: 20px;
+   
+  body{
+    min-height: 100vh
   }
-  
+
   .card-animacion {
     display: inline-block;
     margin: 0 0.5rem;
