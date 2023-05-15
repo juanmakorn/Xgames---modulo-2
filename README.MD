@@ -1,12 +1,12 @@
 # Practico Grupal
 # TRABAJO PRACTICO DE Fin de Modulo 2
 ## Integrantes:
-## Carla Romina Baez 
-## Agustin Ruben Baza
-## Thomas Rivadeneira
-## Juan Manuel Gimenez
-## Axel Emanuel Flores Aragon - scrum master
-## German Andre Rusco
+- Axel Emanuel Flores Aragon - scrum master
+- Carla Romina Baez 
+- Agustin Ruben Baza
+- Thomas Rivadeneira
+- Juan Manuel Gimenez
+- German Andre Rusco
 
 
 ## Fecha de Presentacion 17 de Mayo del 2023-
@@ -30,11 +30,11 @@ lista de productos deseados por un usuario.
 El diseño del sitio será decidido por cada grupo, pero deberá ser completamente
 responsive. Consideramos que al menos deben desarrollar la siguientes páginas:
 
-- ● Página Principal: Esta página mostrará el catálogo de juegos previamente cargados desde la página
+-  Página Principal: Esta página mostrará el catálogo de juegos previamente cargados desde la página
 de administración. Además debe contener un filtro que nos permita buscar un jeugo por su
 nombre.
 
-- ● Página de administración: En la página de administración se debe mostrar una tabla con los
+- Página de administración: En la página de administración se debe mostrar una tabla con los
 juegos cargados, además de las opciones necesarias para agregar, leer, borrar y editar los
 mismos. (solo los usuarios administradores deben poder ver esta página)
 
