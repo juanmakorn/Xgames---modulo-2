@@ -71,7 +71,7 @@ export default class Juego {
     }
   
     get genero() {
-      return this.#anio;
+      return this.#genero;
     }
   
     set genero(genero) {
