@@ -101,16 +101,16 @@
                 <p class="card-text"><b>Comprar:</b></p>
                 <ul>
                     <li>
-                        <a href="">Para PC $12.958.</a>
+                        <i class="bi bi-pc-display-horizontal"></i> <a href="">$12.958.</a>
                     </li>
                     <li>
-                        <a href="">Para PS4 $15.665.</a>
+                        <i class="bi bi-playstation">-4</i> <a href="">$15.665.</a>
                     </li>
                     <li>
-                        <a href="">Para PS5 $15.665.</a>
+                        <i class="bi bi-playstation">-5</i> <a href="">$15.665.</a>
                     </li>
                     <li>
-                        <a href="">Para XBOX S $15.665.</a>
+                        <i class="bi bi-xbox">-S</i> <a href="">$15.665.</a>
                     </li>            
                 </ul>
                 <p class="card-text"><b>Desarrollador:</b> Capcom.</p>
@@ -211,19 +211,27 @@
         </div>
       </section>
       <hr />
-      <section class="mb-3">
-          <button
-              type="button"
-              class="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#comentarioModal"
-              id="botonComentar"
-            >
-              Comentar
-            </button>
-            <i class="bi bi-hand-thumbs-up-fill caraFeliz mx-5"></i>
-            <i class="bi bi-hand-thumbs-down-fill caraTriste"></i>
-      </section>
+      <section class="m-3 text-center">
+        <h4 class="mb-4">Valoraciones</h4>
+        <button id="likeBtn" class="btn btn-success thumb-icon" onclick="votar('like')">
+            <i class="bi bi-hand-thumbs-up-fill"></i> Me gusta
+          </button>
+          <button id="dislikeBtn" class="btn btn-danger thumb-icon" onclick="votar('dislike')">
+            <i class="bi bi-hand-thumbs-down-fill"></i> No me gusta
+          </button>
+          <div id="result"></div>
+        </section>
+        <hr>
+        <h5>Comentarios:</h5>
+        <button
+            type="button"
+            class="btn btn-primary mb-3"
+            data-bs-toggle="modal"
+            data-bs-target="#comentarioModal"
+            id="botonComentar"
+          >
+            Comentar
+          </button>
       </section>
       <section>
         <article id="article"></article>
@@ -292,8 +300,8 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/contador.js"></script>
     <script src="../js/tema.js"></script>
     <script src="../js/agregarComentario.js"></script>
-    <script src="./js/tema.js"></script>
   </body>
 </html>
