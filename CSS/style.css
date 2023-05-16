@@ -38,6 +38,10 @@ main {
   color: #b2fc45;
 }
 
+.filtro {
+  display: none;
+}
+
 /* dispositivos small */
 
 @media all and (max-width: 767px) {

@@ -98,11 +98,10 @@
             <form class="d-flex" role="search">
               <input
                 class="form-control me-2"
-                type="search"
+                type="text"
                 placeholder="Buscar juegos"
-                aria-label="Search"
+                id="buscador"
               />
-              <button class="btn botonBuscar" type="submit">Buscar</button>
             </form>
           </div>
         </article>
@@ -110,7 +109,43 @@
         <article class="my-5">
           <h3 class="text-center mt-5">CATALOGO DE JUEGOS</h3>
           <hr />
-          <section class="row" id="grillaCatalogo"></section>
+          <section class="row" id="grillaCatalogo">
+            <article class="d-flex justify-content-around">
+              <div class="card" style="width: 18rem">
+                <img src="..." class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">GTA 5</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem">
+                <img src="..." class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">FIFA 23</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem">
+                <img src="..." class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">F1 2023</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </article>
+          </section>
         </article>
       </section>
     </main>
@@ -123,6 +158,8 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
     <script src="./js/tema.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
