@@ -9,7 +9,7 @@
 - German Andre Rusco
 
 
-## Fecha de Presentacion 17 de Mayo del 2023-
+## Fecha de Presentacion 17 de Mayo del 2023.
 ### Requerimientos:
 ## Proyecto: Ecommerce gamer
 
