@@ -1,4 +1,6 @@
 import Juego from "./classJuego.js";
+import { sumarioValidacion } from "./helpers.js";
+
 
 let listaJuegos = JSON.parse(localStorage.getItem("listaJuegos")) || [];
 
@@ -7,14 +9,16 @@ if (listaJuegos.length !== 0) {
     (juego) =>
       new Juego(
         juego.nombre,
-        juego.comprar,
+        juego.descripcion,
         juego.imagen,
         juego.genero,
+        juego.precio,
         juego.jugadores,
         juego.idioma,
         juego.lanzamiento,
         juego.edad,
-        juego.descripcion,
+        juego.desarrollador,
+        
         juego.requisitos,
         juego.recomendado
       )
@@ -25,18 +29,19 @@ console.log(listaJuegos);
 let formularioAdminJuego = document.getElementById("formJuego");
 let codigo = document.getElementById("codigo"),
   nombre = document.getElementById("nombre"),
-  comprar = document.getElementById("comprar"),
+  descripcion = document.getElementById("descripcion"),
   imagen = document.getElementById("imagen"),
-  desarrollador = document.getElementById("desarrollador"),
   genero = document.getElementById("genero"),
+  precio = document.getElementById("precio"),
+  desarrollador = document.getElementById("desarrollador"),
   jugadores = document.getElementById("jugadores"),
   idioma = document.getElementById("idioma"),
   lanzamiento = document.getElementById("lanzamiento"),
-  edad = document.getElementById("edad");
-  descripcion = document.getElementById("descripcion");
-  requisitos = document.getElementById("requisitos");
+  edad = document.getElementById("edad"),
+  requisitos = document.getElementById("requisitos"),
   recomendado = document.getElementById("recomendado");
-  let modalFormJuego = new bootstrap.Modal(document.getElementById("modalJuego"));
+  let modalFormJuego = new bootstrap.Modal(document.getElementById("modalJuego")
+  );
   console.log(modalFormJuego);
   let btnCrearJuego = document.getElementById("btnCrearJuego");
   let crearJuegoNuevo = true;
@@ -88,19 +93,25 @@ function prepararFormulario(e) {
 }
 
 function crearJuego() {
+  let resumen = sumarioValidacion(
+    nombre.value,
+    descripcion.value,
+    // precio.value,
+    imagen.value,
+    
+  );
     if (resumen.length === 0) {
     const juegoNuevo = new Juego(
       undefined,
       nombre.value,
-      comprar.value,
+      descripcion.value,
       imagen.value,
-      desarrollador.value,
       genero.value,
+      precio.value,
       jugadores.value,
-      idioma.value,
+      // idioma.value,
       lanzamiento.value,
       edad.value,
-      descripcion.value,
       requisitos.value,
       recomendado.value
     );
@@ -109,9 +120,10 @@ function crearJuego() {
       console.log(listaJuegos);
       
   localStorage.setItem("listaJuegos", JSON.stringify(listaJuegos));
+   guardarEnLocalstorage();
    limpiarFormulario();
-   crearFila(JuegoNuevo, listaJuegos.length);
-    modalFormJuegos.hide();
+   crearFila(juegoNuevo, listaJuegos.length);
+    modalFormJuego.hide();
   } else {
     let alerta = document.getElementById("alerta");
     alerta.innerHTML = resumen;
@@ -156,7 +168,7 @@ window.borrarJuego = (codigo) => {
     let tbody = document.querySelector("#tablaJuego");
       tbody.removeChild(tbody.children[posicionJuego]);
       
-      Swal.fire("Juego eliminado", "El juego seleccionado  fue eliminado correctamente", "success");
+      Swal.fire("El juego seleccionado  fue eliminado correctamente");
     }
   });
 };
@@ -169,10 +181,10 @@ window.prepararJuego = (codigoJuego)=>{
   modalFormJuego.show();
   codigo.value = juegoBuscado.codigo;
   nombre.value = juegoBuscado.nombre;
-  imagen.value = juegoBuscado.imagen;
   descripcion.value = juegoBuscado.descripcion;
-  precio.value = juegoBuscado.precio;
+  imagen.value = juegoBuscado.imagen;
   genero.value = juegoBuscado.genero;
+  precio.value = juegoBuscado.precio;
   jugadores.value = juegoBuscado.jugadores;
   requisitos.value = juegoBuscado.requisitos;
 
@@ -181,16 +193,16 @@ window.prepararJuego = (codigoJuego)=>{
 
 function editarJuego(){
   console.log('editar')
-  let posicionJuego = listaJuegos.findIndex((juego)=> Juego.codigo === codigo.value);
+  let posicionJuego = listaJuegos.findIndex((juego)=> juego.codigo === codigo.value);
   console.log(posicionJuego);
   
-  listaJuegos[posicionJuego].nombre = nombre.value;
+  listaJuegos[posicionJuego].nombre = nombre;
   listaJuegos[posicionJuego].descripcion = descripcion.value;
   listaJuegos[posicionJuego].imagen = imagen.value;
-  listaJuegos[posicionJuego].desarrollador = desarrollador.value;
   listaJuegos[posicionJuego].genero = genero.value;
+  // listaJuegos[posicionJuego].desarrollador = desarrollador.value;
   listaJuegos[posicionJuego].jugadores = jugadores.value;
-  listaJuegos[posicionJuego].idioma = idioma.value;
+  // listaJuegos[posicionJuego].idioma = idioma.value;
   listaJuegos[posicionJuego].lanzamiento = lanzamiento.value;
   listaJuegos[posicionJuego].edad = edad.value;
   listaJuegos[posicionJuego].requisitos = requisitos.requisitos;
@@ -207,5 +219,7 @@ function editarJuego(){
   tbody.children[posicionJuego].children[4].innerHTML = genero.value;
   limpiarFormulario();
   modalFormJuego.hide();
-  Swal.fire("Juego modificado", "El juego seleccionado fue modificada exitosamente", "success");
+  Swal.fire("Juego modificado");
 }
+
+

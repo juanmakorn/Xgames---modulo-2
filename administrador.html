@@ -97,7 +97,7 @@
                 <th scope="col">Acciones</th>
               </tr>
             </thead>
-            <tbody id="tablaJuegos">
+            <tbody id="tablaJuego">
             </tbody>
           </table>
         </article>
@@ -105,7 +105,7 @@
     </main>
     <div
       class="modal fade"
-      id="modalJuegos"
+      id="modalJuego"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -143,7 +143,7 @@
                   id="nombre"
                   type="text"
                   class="form-control"
-                  placeholder="Ej: Resident Evil"
+                  placeholder="Resident Evil"
                 
                 />
               </div>
@@ -153,7 +153,7 @@
                   id="descripcion"
                   rows="4"
                   class="form-control"
-                  placeholder="Ej:xxxxxxxxxxxxxxxxxxxxxx"
+                  placeholder="xxxxxxxxxxxxxxxxxxxxxx"
                   maxlength="200"
                   minlength="2"
                 ></textarea>
@@ -187,23 +187,36 @@
                   id="precio"
                   type="text"
                   class="form-control"
-                  placeholder="Ej: 12999"
+                  placeholder=" 12999"
                   maxlength="6"
                   minlength="4"
                  
                 />
               </div>
               <div class="mb-3">
+                <label for="desarrollador"
+                  >Desarrollador
+                  </label
+                >
+                <input
+                  id="desarollador"
+                  type="text"
+                  class="form-control"
+                  placeholder="Capcom"
+                  maxlength="20"
+                  minlength="5"
+                />
+              <div class="mb-3">
                 <label for="jugadores"
                   ><small class="text-secondary">
                   </small
-                  ></label
+                  >Jugadores</label
                 >
                 <input
                   id="jugadores"
                   type="text"
                   class="form-control"
-                  placeholder="Ej: 1 jugador"
+                  placeholder=" 1 jugador"
                 
                 />
               </div>
@@ -213,7 +226,7 @@
                   id="idioma
                   type="text"
                   class="form-control"
-                  placeholder="Ej: Español"
+                  placeholder=" Español"
                   maxlength="20"
                   minlength="2"
                 />
@@ -221,13 +234,13 @@
               <div class="mb-3">
                 <label for="lanzamiento"
                   >lanzamiento
-                  ></label
+                  </label
                 >
                 <input
                   id="lanzamiento"
                   type="text"
                   class="form-control"
-                  placeholder="Ej: 2015"
+                  placeholder="2015"
                   maxlength="4"
                   minlength="4"
                 />
@@ -242,40 +255,29 @@
                   id="edad"
                   type="text"
                   class="form-control"
-                  placeholder="Ej: 18"
+                  placeholder="18"
                   maxlength="3"
                   minlength="2"
                 />
               </div>
-              <div class="mb-3">
-                <label for="descripcion">Descripción </label>
-                <textarea
-                  id="descripcion"
-                  rows="4"
-                  class="form-control"
-                  placeholder="Ej:Juego..."
-                  maxlength="200"
-                  minlength="2"
-                ></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="requisitos">Requisitos </label>
+               <div class="mb-3">
+                <label for="requisitos">Requisitos</label>
                 <textarea
                   id="requisitos"
                   rows="4"
                   class="form-control"
-                  placeholder="Ej:Creado para PS4"
+                  placeholder="Creado para PS4"
                   maxlength="200"
                   minlength="2"
                 ></textarea>
               </div>
               <div class="mb-3">
-                <label for="recomendado">Recomendado </label>
+                <label for="recomendado">Recomendado</label>
                 <textarea
                   id="recomendado"
                   rows="4"
                   class="form-control"
-                  placeholder="Ej:..."
+                  placeholder="..."
                   maxlength="200"
                   minlength="2"
                 ></textarea>
@@ -297,13 +299,14 @@
     <footer class="bg-dark text-light text-center py-3">
       <p>&copy; Todos los derechos reservados</p>
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js
+"></script>
     <script src="./js/tema.js"></script>
     <script src="./js/administrador.js" type="module"></script>
+    
+    
   </body>
 </html>
