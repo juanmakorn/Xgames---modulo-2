@@ -8,14 +8,14 @@ if (listaJuegos.length !== 0) {
     (juego) =>
       new Juego(
         juego.nombre,
-        juego.comprar,
+        juego.descripcion,
         juego.imagen,
         juego.genero,
+        juego.precio,
         juego.jugadores,
         juego.idioma,
         juego.lanzamiento,
         juego.edad,
-        juego.descripcion,
         juego.requisitos,
         juego.recomendado
       )
@@ -26,15 +26,15 @@ console.log(listaJuegos);
 let formularioAdminJuego = document.getElementById("formJuego");
 let codigo = document.getElementById("codigo"),
   nombre = document.getElementById("nombre"),
-  comprar = document.getElementById("comprar"),
+  descripcion = document.getElementById("descripcion"),
   imagen = document.getElementById("imagen"),
-  desarrollador = document.getElementById("desarrollador"),
   genero = document.getElementById("genero"),
+  precio = document.getElementById("precio"),
+  desarrollador = document.getElementById("desarrollador"),
   jugadores = document.getElementById("jugadores"),
   idioma = document.getElementById("idioma"),
   lanzamiento = document.getElementById("lanzamiento"),
   edad = document.getElementById("edad");
-  descripcion = document.getElementById("descripcion");
   requisitos = document.getElementById("requisitos");
   recomendado = document.getElementById("recomendado");
   let modalFormJuego = new bootstrap.Modal(document.getElementById("modalJuego"));
@@ -93,15 +93,15 @@ function crearJuego() {
   if (resumen.length === 0) {
     const juegoNuevo = new Juego(
       nombre.value,
-      comprar.value,
+      descripcion.value,
       imagen.value,
-      desarrollador.value,
       genero.value,
+      precio.value,
+      desarrollador.value,
       jugadores.value,
       idioma.value,
       lanzamiento.value,
       edad.value,
-      descripcion.value,
       requisitos.value,
       recomendado.value
     );
@@ -111,7 +111,7 @@ function crearJuego() {
     localStorage.setItem("listaJuegos", JSON.stringify(listaJuegos));
 
     limpiarFormulario();
-    modalFormPelicula.hide();
+    modalFormJuego.hide();
   } else {
     let alerta = document.getElementById("alerta");
     alerta.innerHTML = resumen;
