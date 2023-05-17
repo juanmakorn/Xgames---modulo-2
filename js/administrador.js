@@ -88,15 +88,7 @@ function prepararFormulario(e) {
 }
 
 function crearJuego() {
-  let resumen = sumarioValidacion(
-    nombre.value,
-    descripcion.value,
-    desarrollador.value,
-    imagen.value,
-    precio.value
-  );
-
-  if (resumen.length === 0) {
+    if (resumen.length === 0) {
     const juegoNuevo = new Juego(
       undefined,
       nombre.value,
@@ -184,7 +176,7 @@ window.prepararJuego = (codigoJuego)=>{
   jugadores.value = juegoBuscado.jugadores;
   requisitos.value = juegoBuscado.requisitos;
 
-  crearPeliculaNueva= false;
+  crearJuegoNuevo= false;
 }
 
 function editarJuego(){
