@@ -45,3 +45,7 @@
   @media all and (max-width: 640px){
     
   }
+
+.tamanioCelda {
+    max-width: 10rem;
+}
