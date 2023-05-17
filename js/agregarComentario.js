@@ -1,42 +1,3 @@
-/*let btnComentar = document.querySelector('form');
-let article = document.getElementById('article');
-let myModal = new bootstrap.Modal(document.getElementById('comentarioModal'));
-let nombre = document.getElementById('nombre');
-let comentario = document.getElementById('comentario');
-
-//agregar Eventos
-btnComentar.addEventListener('submit', escribirComentario);
-
-function escribirComentario(e) {
-  e.preventDefault();
-  const div = document.createElement("div");
-  div.className = "card";
-  const div2 = document.createElement("div");
-  div2.className = "card-header";
-  div2.innerHTML = e.target[0].value;
-  const div3 = document.createElement("div");
-  div3.className = "card-body";
-  const p = document.createElement("p");
-  p.className = "text-secondary";
-  p.innerHTML = e.target[1].value;
-  div3.appendChild(p);
-  div.appendChild(div2);
-  div.appendChild(div3);
-  const br = document.createElement("br");
-  article.appendChild(div);
-  article.appendChild(br);
-  btnComentar.reset();
-  myModal.hide();
-   // Almacenar el comentario en el LocalStorage
-   const comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
-   comentarios.push({
-     nombre: e.target[0].value,
-     comentario: e.target[1].value
-    });
-    localStorage.setItem("comentarios", JSON.stringify(comentarios));
-}*/
-
-// Obtener los elementos del DOM
 let btnComentar = document.querySelector("form");
 let article = document.getElementById("article");
 let myModal = new bootstrap.Modal(document.getElementById("comentarioModal"));
@@ -69,6 +30,9 @@ function escribirComentario(e) {
 
   // Mostrar el comentario en el DOM
   mostrarComentario(comentarioObj);
+
+  // Mostrar la alerta dependiendo del resultado
+  alerta(comentarioObj);
 
   // Restablecer el formulario y ocultar el modal
   btnComentar.reset();
@@ -107,4 +71,22 @@ function mostrarComentario(comentario) {
   const br = document.createElement("br");
   article.appendChild(div);
   article.appendChild(br);
+}
+
+function alerta(comentario) {
+  if (comentario.nombre && comentario.contenido) {
+    Swal.fire({
+      icon: "success",
+      title: "Comentario agregado",
+      text: "El comentario se agregó correctamente.",
+      confirmButtonText: "Aceptar",
+    });
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Comentario no agregado",
+      text: "El comentario no fue agregado debido a que no cumple con las condiciones.",
+      confirmButtonText: "Aceptar",
+    });
+  }
 }
