@@ -1,0 +1,103 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+   
+  .contenedor {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 48px;
+    color: #fff;
+    margin-top: 0;
+  }
+  
+  p {
+    font-size: 24px;
+    color: #fff;
+  }
+   
+  body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-animacion {
+    display: inline-block;
+    margin: 0 0.5rem;
+    animation: bounce; 
+    animation-duration: 5s; 
+  }
+
+  main {
+    flex-grow: 1;
+  }
+
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+.tamanioCelda {
+    max-width: 10rem;
+}
+
+.barraIndex {
+  background-color: #000000;
+  border-radius: 1ch;
+  padding: 10px;
+  border: solid 2px #b2fc45;
+}
+
+.busquedaIndex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 23%;
+}
+
+.botonBuscar {
+  background-color: #b2fc45;
+}
+
+.textoBarra {
+  color: #b2fc45;
+}
+
+.filtro {
+  display: none;
+}
+
+@media all and (max-width: 767px) {
+  .busquedaIndex {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .espacioBarraSmall {
+    padding-top: 10px;
+  }
+
+  .logo {
+    width: 45%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .logo {
+    width: 34%;
+  }
+}
