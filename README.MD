@@ -3,12 +3,12 @@
 # Fin de Modulo 2
 
 ## Integrantes 👨‍👨‍👧‍👦 :
-● Carla Romina Baez 
-● Agustin Ruben Baza
-● Thomas Rivadeneira
-● Juan Manuel Gimenez
-● Axel Emanuel Flores Aragon - Scrum master
-● German Andre Rusco
+- Carla Romina Baez 
+- Agustin Ruben Baza
+- Thomas Rivadeneira
+- Juan Manuel Gimenez
+- Axel Emanuel Flores Aragon - Scrum master
+- German Andre Rusco
 
 
 ## Fecha de Presentacion 17 de Mayo del 2023 ⌛
