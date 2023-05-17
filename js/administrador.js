@@ -188,7 +188,7 @@ window.prepararJuego = (codigoJuego) => {
   crearJuegoNuevo = false;
 };
 
-function editarJuego() {
+window.editarJuego = () => {
   console.log("editar");
   let posicionJuego = listaJuegos.findIndex(
     (juego) => juego.codigo === codigo.value
